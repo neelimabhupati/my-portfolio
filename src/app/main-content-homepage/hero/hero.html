@@ -1,1 +1,26 @@
-<p>hero works!</p>
+<section class="hero">
+    <div class="hero_content">
+        <button class="hero_greetings">{{greeting}}</button>
+
+        <h1 class="hero_title">
+            <span>{{titleLineOne}}</span>
+            <span>{{titleLineTwo}}</span>
+        </h1>
+
+        <button class="hero_contact" type="button" (click)="contactMe()"> Get in Touch</button>
+    </div>
+
+    <figure class="hero_photo">
+        <img src="./images/Neelima.jpeg" alt="Neelima image" />
+        <figcaption>Neelima :)</figcaption>
+    </figure>
+
+</section>
+
+<div class="hero_social_media">
+    @for (social of socialLinks; track social.label) {
+    <a [href]="social.href">
+        <img [src]="social.src" alt="social.label" />
+    </a>
+    }
+</div>
