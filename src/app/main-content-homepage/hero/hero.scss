@@ -16,6 +16,7 @@
         margin: 0 auto;
     }
 
+
     .hero_greetings {
         position: absolute;
         top: 10%;
@@ -26,6 +27,46 @@
         background: transparent;
         color: #fff;
         font: inherit;
+        cursor: pointer;
+        width: 160px;
+        box-sizing: border-box;
+        white-space: nowrap;
+        overflow: hidden;
+        transition: width 0.8s ease, background-color 0.4s ease, border-color 0.4s ease;
+
+
+        &.expanded {
+            width: 250px;
+            background-color: rgb(97, 29, 206);
+            border-color: rgb(28, 24, 24);
+            transition: width 0.6s ease, background-color 0.4s ease, border-color 0.4s ease;
+
+        }
+
+    }
+
+    .hero_greeting_emoji {
+
+        position: absolute;
+        top: calc(10% - 30px);
+        left: 200px;
+        z-index: 1;
+        font-size: 36px;
+        line-height: 1;
+        opacity: 0;
+        animation: greetingEmojiRise 0.8s ease both;
+    }
+
+    @keyframes greetingEmojiRise {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .hero_title {
@@ -49,12 +90,28 @@
             margin-top: 0.35em;
             text-align: right;
         }
+
+        .hero_title_letter {
+            display: inline-block;
+        }
+
+        .hero_title_letter.is-uppercase:hover {
+            cursor: pointer;
+            color: red;
+            text-transform: lowercase;
+        }
+
+        .hero_title_letter.is-lowercase:hover {
+            cursor: pointer;
+            color: red;
+            text-transform: uppercase;
+        }
     }
 
     .hero_contact {
         position: absolute;
-        right: 0;
-        bottom: -30px;
+        right: -160px;
+        bottom: -80px;
         text-align: end;
         padding: 12px 28px;
         border: 1px solid whitesmoke;
@@ -94,6 +151,20 @@
         figcaption {
             padding-top: 10px;
             font-weight: bold;
+
+            span:last-child {
+                display: none;
+            }
+        }
+
+        img:hover+figcaption {
+            span:first-child {
+                display: none;
+            }
+
+            span:last-child {
+                display: inline;
+            }
         }
     }
 

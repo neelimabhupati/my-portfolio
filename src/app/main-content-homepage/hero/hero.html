@@ -1,10 +1,26 @@
 <section class="hero">
     <div class="hero_content">
-        <button class="hero_greetings">{{greeting}}</button>
+        <button class="hero_greetings" [class.expanded]="greetingExpanded()" [attr.aria-expanded]="greetingExpanded()"
+            (click)="expandGreeting()">{{ greetingExpanded() ? "Hello, I'm Neelima Bhupati" : greeting }}
+        </button>
+        @if (greetingExpanded()) {
+        <span class="hero_greeting_emoji" aria-hidden="true">🙋🏻‍♀️</span>
+        }
 
         <h1 class="hero_title">
-            <span>{{titleLineOne}}</span>
-            <span>{{titleLineTwo}}</span>
+            <span>
+                @for (letter of titleLineOneLetters; track $index) {
+                <span class="hero_title_letter" [class.is-uppercase]="letter === letter.toUpperCase()"
+                    [class.is-lowercase]="letter === letter.toLowerCase()">{{letter}}</span>
+                }
+            </span>
+
+            <span>
+                @for (letter of titleLineTwoLetters; track $index) {
+                <span class="hero_title_letter" [class.is-uppercase]="letter === letter.toUpperCase()"
+                    [class.is-lowercase]="letter === letter.toLowerCase()">{{letter}}</span>
+                }
+            </span>
         </h1>
 
         <button class="hero_contact" type="button" (click)="contactMe()"> Get in Touch</button>
@@ -12,7 +28,10 @@
 
     <figure class="hero_photo">
         <img src="./images/Neelima.jpeg" alt="Neelima image" />
-        <figcaption>Neelima :)</figcaption>
+        <figcaption>
+            <span>Neelima 🙂</span>
+            <span>Neelima 😄</span>
+        </figcaption>
     </figure>
 
 </section>

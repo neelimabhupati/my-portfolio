@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   imports: [],
@@ -8,8 +8,12 @@ import { Component } from '@angular/core';
 })
 export class Hero {
   readonly greeting = 'Hello world';
+  greetingExpanded = signal(false);
+  private greetingTimeout: number | undefined;
   readonly titleLineOne = 'Frontend';
   readonly titleLineTwo = 'Developer';
+  readonly titleLineOneLetters = this.titleLineOne.split('');
+  readonly titleLineTwoLetters = this.titleLineTwo.split('');
 
   readonly socialLinks = [
     {
@@ -32,7 +36,20 @@ export class Hero {
     },
   ];
 
+  expandGreeting(): void {
+    this.greetingExpanded.set(true);
+
+    if (this.greetingTimeout !== undefined) {
+      window.clearTimeout(this.greetingTimeout);
+    }
+
+    this.greetingTimeout = window.setTimeout(() => {
+      this.greetingExpanded.set(false);
+    }, 2000);
+  }
+
   contactMe(): void {
     window.location.href = 'neelimadocument@gmail.com';
   }
+
 }
