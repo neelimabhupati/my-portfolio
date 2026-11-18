@@ -1,1 +1,24 @@
-<p>aboutme works!</p>
+<section class="about-section">
+    <div class="about-layout">
+        <div class="about-statuses">
+            @for (status of statusItems; track status.label) {
+                <div [class]="status.className">
+                    <img class="about-status-image" [src]="status.image" alt="" />
+                    <span aria-hidden="true">{{ status.icon }}</span>
+                    <span>{{ status.label }}</span>
+                </div>
+            }
+        </div>
+
+        <div class="about-copy">
+            <p class="about-eyebrow">{{ eyebrow }}</p>
+            <h2>{{ heading }}</h2>
+
+            @for (paragraph of paragraphs; track $index) {
+                <p>{{ paragraph }}</p>
+            }
+
+            <button class="about-cta" type="button">{{ ctaLabel }}</button>
+        </div>
+    </div>
+</section>
