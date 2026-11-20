@@ -15,6 +15,13 @@ interface Project {
 })
 export class MyProjects {
 
+  readonly sectionCopy = {
+    eyebrow: 'MY CRAFT',
+    heading: 'Projects',
+    description:
+      'Take a look at my projects. I focus on building responsive, user-friendly applications with clean code.',
+  };
+  
   readonly featuredProject = {
     id: 'join',
     title: 'Join',
