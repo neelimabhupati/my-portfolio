@@ -11,7 +11,7 @@ export class Hero {
   readonly greeting = 'Hello world';
   greetingExpanded = signal(false);
   private greetingTimeout: number | undefined;
-  readonly titleLineOne = 'Frontend';
+  readonly titleLineOne = 'Fullstack';
   readonly titleLineTwo = 'Developer';
   readonly socialLinks = SOCIAL_LINKS;
   readonly titleLineOneLetters = this.titleLineOne.split('');

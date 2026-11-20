@@ -149,3 +149,11 @@
 .featured-sticker {
     z-index: 1;
 }
+
+.featured-image-area:hover app-project-details-button,
+.featured-image-area:focus-within app-project-details-button,
+.project-image-area:hover app-project-details-button,
+.project-image-area:focus-within app-project-details-button {
+    opacity: 1;
+    pointer-events: auto;
+}

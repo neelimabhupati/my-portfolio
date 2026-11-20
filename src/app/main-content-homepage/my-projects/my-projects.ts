@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProjectDetailsButton } from '../../shared/components/project-details-button/project-details-button';;
 
 interface Project {
   id: string;
@@ -8,7 +9,7 @@ interface Project {
 }
 
 @Component({
-  imports: [],
+  imports: [ ProjectDetailsButton ],
   selector: 'app-my-projects',
   styleUrl: './my-projects.scss',
   templateUrl: './my-projects.html',
