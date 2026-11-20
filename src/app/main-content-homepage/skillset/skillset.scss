@@ -1,0 +1,326 @@
+.skillset-section {
+    padding: 60px 24px;
+    color: white;
+    background-image: url('/images/01_Background/Img%20Original%20Size/Skills%20BG.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.skillset-heading {
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.skillset-title {
+    align-items: left;
+
+}
+
+.skillset-eyebrow {
+    margin: 0 0 8px;
+    size: 20px;
+    text-align: center;
+}
+
+.skillset-title h2 {
+    display: inline-block;
+    margin: 0;
+    font-size: 45px;
+    padding: 8px 18px;
+    background-image: url('/icons/00_Hand-drawn%20lines/02_Skills/Color%20option%203.png');
+    background-size: 100% 100%;
+}
+
+.skillset-description {
+    min-height: 150px;
+    width: 650px;
+    margin: 0;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    color: #171717;
+    background-image: url('/images/02_Ripped%20Paper/1.Skills%20description.png');
+    background-size: 100% 100%;
+}
+
+.skillset-content {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    gap: 62px;
+    align-items: center;
+}
+
+.skillset-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px 36px;
+}
+
+.skill-item {
+    margin: 0;
+    text-align: center;
+
+    img {
+        width: 56px;
+        height: 56px;
+        object-fit: contain;
+    }
+
+    figcaption {
+        margin-top: 6px;
+    }
+}
+
+.skillset-peel {
+    position: relative;
+    width: 180px;
+    aspect-ratio: 1;
+    padding: 0;
+    border: 0;
+    color: white;
+    font: inherit;
+    text-align: center;
+    background: none;
+    cursor: pointer;
+    transform: rotate(10deg);
+}
+
+.peel-front,
+.peel-back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s, transform 0.5s;
+    box-sizing: border-box;
+    padding: 28px;
+}
+
+.peel-front {
+    z-index: 2;
+}
+
+.peel-back {
+    z-index: 1;
+    opacity: 0;
+    transform: scale(0.85);
+}
+
+.peel-art {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 0;
+}
+
+.peel-front>span,
+.peel-message {
+    position: relative;
+    z-index: 2;
+}
+
+.peel-arrow {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.skillset-peel.peeled .peel-front {
+    opacity: 0;
+    transform: scale(0.85);
+}
+
+.skillset-peel.peeled .peel-back {
+    z-index: 3;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.peel-message {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.peel-skills {
+    top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.peel-message,
+.peel-skills {
+    position: relative;
+    z-index: 2;
+}
+
+.peel-skill img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.peel-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 499px) {
+    // Small mobile
+
+    .skillset-heading {
+        grid-template-columns: 1fr;
+    }
+
+    .skillset-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .skillset-description {
+        background-image: url('/images/02_Ripped%20Paper/1B.Mobile.png');
+        width: 100%;
+        min-width: 0;
+        padding: 44px 32px;
+    }
+
+    .skillset-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skillset-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px 16px;
+    }
+
+    .peel-art {
+        top: -40px;
+        width: 90%;
+        height: 90%;
+    }
+
+    .peel-transition {
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .skillset-peel.peeled .peel-transition {
+        animation: peel-middle 2.5s ease-in-out forwards;
+    }
+
+    .skillset-peel.peeled .peel-back {
+        z-index: 4;
+        transition-delay: 2.1s;
+    }
+
+    @keyframes peel-middle {
+
+        0%,
+        10% {
+            opacity: 0;
+        }
+
+        20%,
+        70% {
+            opacity: 1;
+        }
+
+        85%,
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+@media (min-width:500px) and (max-width: 768px) {
+    .skillset-heading {
+        grid-template-columns: 1fr;
+    }
+
+    .skillset-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .skillset-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skillset-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px 16px;
+    }
+
+    .peel-art {
+        // top: -30px;
+        width: 90%;
+        height: 90%;
+    }
+
+    .skillset-description {
+        min-height: 150px;
+        width: 100%;
+    }
+
+    .peel-arrow {
+        top: 15%;
+    }
+}
+
+@media (min-width:769px) and (max-width:968px) {
+    .skillset-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px 16px;
+    }
+
+    .skillset-heading {
+        grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
+    }
+
+    .skillset-content {
+        max-width: 600px;
+        grid-template-columns: minmax(0, 1fr) 100px;
+        gap: 24px;
+    }
+
+    .skillset-description {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .skillset-peel {
+        width: 130px;
+    }
+
+    .peel-arrow {
+        top: 10%;
+    }
+}

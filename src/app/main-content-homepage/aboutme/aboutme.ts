@@ -15,19 +15,19 @@ export class Aboutme {
   readonly statusItems = [
     {
       label: 'Based in Munich',
-      icon: '⌖',
+      icon: '/icons/LocationIcon.png',
       image: '/images/Yellow.png.png',
       className: 'about-status about-status--location',
     },
     {
       label: 'Open to relocate',
-      icon: '↗',
+      icon: '/icons/Relocate.png',
       image: '/images/Blue.png.png',
       className: 'about-status about-status--relocate',
     },
     {
       label: 'Open to remote work',
-      icon: '⌂',
+      icon: '/icons/remotework.png',
       image: '/images/Orange.png.png',
       className: 'about-status about-status--remote',
     },

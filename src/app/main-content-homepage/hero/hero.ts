@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { SOCIAL_LINKS } from '../../shared/data/social-links/social-links';
 
 @Component({
   imports: [],
@@ -12,29 +13,9 @@ export class Hero {
   private greetingTimeout: number | undefined;
   readonly titleLineOne = 'Frontend';
   readonly titleLineTwo = 'Developer';
+  readonly socialLinks = SOCIAL_LINKS;
   readonly titleLineOneLetters = this.titleLineOne.split('');
   readonly titleLineTwoLetters = this.titleLineTwo.split('');
-
-  readonly socialLinks = [
-    {
-      label: 'LinkedIn',
-      src: '/icons/linkedin.png',
-      href: 'https://www.linkedin.com/in/your-profile/',
-      external: true,
-    },
-    {
-      label: 'GitHub',
-      src: '/icons/github.png',
-      href: 'https://github.com/your-username',
-      external: true,
-    },
-    {
-      label: 'Email',
-      src: '/icons/Email.png',
-      href: 'mailto:your.email@example.com',
-      external: false,
-    },
-  ];
 
   expandGreeting(): void {
     this.greetingExpanded.set(true);

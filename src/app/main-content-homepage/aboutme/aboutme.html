@@ -4,7 +4,8 @@
             @for (status of statusItems; track status.label) {
                 <div [class]="status.className">
                     <img class="about-status-image" [src]="status.image" alt="" />
-                    <span aria-hidden="true">{{ status.icon }}</span>
+                    <!-- <span aria-hidden="true">{{ status.icon }}</span> -->
+                    <img class="about-status-icon" [src]="status.icon" alt="" />
                     <span>{{ status.label }}</span>
                 </div>
             }

@@ -1,15 +1,35 @@
-<header class="header">
-    <a class="logo" href="" aria-label="Home">Neelima Bhupati</a>
+<header class="header" [class.menu-open]="menuOpen()">
+    <a class="logo" href="" aria-label="Home">
+        <img src="/icons/letter-n.png" alt="" />
+    </a>
+
+    <button class="menu-toggle" type="button" [attr.aria-expanded]="menuOpen()"
+        [attr.aria-label]="menuOpen() ? 'Close menu' : 'Open menu'" (click)="toggleMenu()">
+        @if (menuOpen()) {
+        <span class="close-icon"></span>
+        } @else {
+        <img src="/icons/menu.png" alt="" />
+        }
+    </button>
 
     <nav class="nav" aria-label="Main navigation">
-        <a href="">About me</a>
-        <a href="">Skills</a>
-        <a href="">Projects</a>
-        <a href="">Contact</a>
+        <a href="" (click)="closeMenu()">About me</a>
+        <a href="" (click)="closeMenu()">Skills</a>
+        <a href="" (click)="closeMenu()">Projects</a>
+        <a href="" (click)="closeMenu()">Contact</a>
     </nav>
 
     <div class="language-switcher" aria-label="Switch language">
         <button type="button" aria-pressed="true">DE</button>
         <button type="button" aria-pressed="false">EN</button>
     </div>
+
+    <div class="header-socials">
+        @for (social of socialLinks; track social.label) {
+        <a [href]="social.href" [attr.aria-label]="social.label">
+            <img [src]="social.src" alt="" />
+        </a>
+        }
+    </div>
+    
 </header>

@@ -1,0 +1,179 @@
+.about-section {
+  padding: 70px 24px;
+  background: #FFFFFF;
+  color: #171717;
+
+  .about-layout {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 8vw, 100px);
+    align-items: center;
+  }
+
+  .about-statuses {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-status {
+    position: relative;
+    min-height: 150px;
+    width: 100%;
+    margin: -3px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: #fff;
+    font-size: 22px;
+    filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.12));
+
+    &-image {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+    .about-status-icon {
+      position: relative;
+      z-index: 1;
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      transform: translateY(-8px);
+    }
+
+    >span {
+      position: relative;
+      z-index: 1;
+      transform: translateY(-8px);
+    }
+
+    &--location {
+      z-index: 3;
+      margin-bottom: -58px;
+      transform: rotate(-6deg);
+    }
+
+    &--relocate {
+      z-index: 2;
+      margin-bottom: -44px;
+      transform: rotate(-5deg);
+    }
+
+    &--remote {
+      z-index: 1;
+      transform: rotate(-1deg);
+    }
+  }
+
+  .about-copy {
+    max-width: 460px;
+
+    .about-eyebrow {
+      margin: 0 0 8px;
+      font-size: 14px;
+      font-weight: 700;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      margin: 0 0 24px;
+      font-size: 48px;
+      line-height: 1;
+    }
+
+    p:not(.about-eyebrow) {
+      margin: 0 0 18px;
+      line-height: 1.45;
+    }
+
+    .about-cta {
+      display: block;
+      margin: 30px 0 0 auto;
+      padding: 12px 28px;
+      border: 2px solid #171717;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #171717;
+      font: inherit;
+      cursor: pointer;
+    }
+  }
+
+  .about-copy h2 {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 40px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -18px;
+      width: 200px;
+      height: 15px;
+      background: url('/icons/00_Hand-drawn%20lines/01_About%20me/Color%20option%201.png') center / 100% 100% no-repeat;
+      clip-path: inset(0 100% 0 0);
+      animation: draw-stroke linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 64px 20px;
+
+    .about-layout {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .about-copy {
+      order: -1;
+    }
+
+    .about-statuses {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .about-status {
+      min-height: 110px;
+      font-size: 18px;
+      gap: 12px;
+
+      &--location {
+        margin-bottom: -42px;
+        transform: rotate(-4deg);
+      }
+
+      &--relocate {
+        margin-bottom: -32px;
+        transform: rotate(-3deg);
+      }
+
+      &--icon {
+        width: 34px;
+        height: 34px;
+      }
+
+    }
+    .about-copy {
+      max-width: 100%;
+    }
+  }
+
+  @keyframes draw-stroke {
+    to {
+      clip-path: inset(0);
+    }
+  }
+}

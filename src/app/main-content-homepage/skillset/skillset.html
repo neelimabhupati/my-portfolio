@@ -1,1 +1,51 @@
-<p>skillset works!</p>
+<section class="skillset-section" aria-labelledby="skillset-heading">
+
+    <div class="skillset-heading">
+        <div class="skillset-title">
+            <p class="skillset-eyebrow">{{ eyebrow}}</p>
+            <h2 id="skillset-heading">{{ heading}}</h2>
+        </div>
+
+        <p class="skillset-description">{{ description }}</p>
+    </div>
+
+    <div class="skillset-content">
+        <div class="skillset-grid">
+            @for (skill of skills; track skill.name) {
+            <figure class="skill-item">
+                <img [src]="skill.icon" alt="" loading="lazy" />
+                <figcaption>{{ skill.name }}</figcaption>
+            </figure>
+            }
+        </div>
+
+        <button class="skillset-peel" [class.peeled]="peeled()" [attr.aria-expanded]="peeled()" (click)="togglePeel()">
+            <span class="peel-front">
+                <img class="peel-art" [src]="peelAssets.front" alt="" />
+                <img class="peel-arrow" [src]="peelAssets.arrow" alt="" />
+                <span>{{ peelInstruction }}</span>
+            </span>
+
+            <span class="peel-transition" aria-hidden="true">
+                <img class="peel-art" [src]="peelAssets.transition" alt="" />
+            </span>
+            
+            <span class="peel-back">
+                <img class="peel-art" [src]="peelAssets.back" alt="" />
+                <span class="peel-message">{{ peelMessage }}</span>
+
+                <span class="peel-skills">
+                    @for (skill of additionalSkills; track skill.name) {
+                    <span class="peel-skill">
+                        <img [src]="skill.icon" alt="skill icons" />
+                        <span>{{ skill.name }}</span>
+                    </span>
+                    }
+                </span>
+
+            </span>
+        </button>
+
+    </div>
+
+</section>
