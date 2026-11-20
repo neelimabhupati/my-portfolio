@@ -1,21 +1,37 @@
 <section class="project-section" aria-labelledby="project-heading">
     <div class="project-container">
-        <p>{{ sectionCopy.eyebrow }}</p>
-        <h2 id="project-heading">{{ sectionCopy.heading }}</h2>
-        <p>{{ sectionCopy.description }}</p>
+        <div class="projects-top">
+            <div class="projects-intro">
+                <p>{{ sectionCopy.eyebrow }}</p>
+                <h2 id="project-heading">{{ sectionCopy.heading }}</h2>
 
-        <article class="featured-project">
-            <img [src]="featuredProject.image" [alt]="featuredProject.title + ' project preview'" />
-            <h3>{{ featuredProject.title }}</h3>
-            <p>{{ featuredProject.description }}</p>
-        </article>
+                @for (paragraph of sectionCopy.description; track $index) {
+                <p class="projects-intro-description">{{ paragraph }}</p>
+                }
+            </div>
 
-        @for (project of projects; track project.id) {
-        <article class="project-card">
-            <img [src]="project.image" [alt]="project.title + ' project preview'" />
-            <h3>{{ project.title }}</h3>
-            <p>{{ project.description }}</p>
-        </article>
-        }
+            <article class="featured-project">
+                <div class="featured-image-area">
+                    <img class="featured-image" [src]="featuredProject.image"
+                        [alt]="featuredProject.title + ' project preview'" />
+                    <img class="featured-sticker" [src]="featuredProject.sticker" alt="" />
+                </div>
+                <h3>{{ featuredProject.title }}</h3>
+                <p>{{ featuredProject.description }}</p>
+            </article>
+        </div>
+
+        <div class="project-grid">
+            @for (project of projects; track project.id) {
+            <article class="project-card">
+                <div class="project-image-area">
+                    <img class="project-image" [src]="project.image" [alt]="project.title + ' project preview'" />
+                </div>
+
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+            </article>
+            }
+        </div>
     </div>
 </section>

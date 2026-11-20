@@ -18,10 +18,13 @@ export class MyProjects {
   readonly sectionCopy = {
     eyebrow: 'MY CRAFT',
     heading: 'Projects',
-    description:
-      'Take a look at my projects. I focus on building responsive, user-friendly applications with clean code.',
+    description: [
+      'Three projects, three ways to see how I build for the web. Take a look, click around and try them out yourself.',
+      'Fight through three increasingly hard levels in a fantasy jump-and-run, find out who your favourite Pokémon is in a Pokédex, or organise your tasks in a kanban board full of clever little features.',
+      'Go ahead and give them a try!',
+    ],
   };
-  
+
   readonly featuredProject = {
     id: 'join',
     title: 'Join',
