@@ -15,7 +15,7 @@
                     <img class="featured-image" [src]="featuredProject.image"
                         [alt]="featuredProject.title + ' project preview'" />
                     <img class="featured-sticker" [src]="featuredProject.sticker" alt="" />
-                     <app-project-details-button />
+                    <app-project-details-button [projectId]="featuredProject.id" />
                 </div>
                 <h3>{{ featuredProject.title }}</h3>
                 <p>{{ featuredProject.description }}</p>
@@ -27,7 +27,7 @@
             <article class="project-card">
                 <div class="project-image-area">
                     <img class="project-image" [src]="project.image" [alt]="project.title + ' project preview'" />
-                     <app-project-details-button />
+                    <app-project-details-button [projectId]="project.id" />
                 </div>
 
                 <h3>{{ project.title }}</h3>
