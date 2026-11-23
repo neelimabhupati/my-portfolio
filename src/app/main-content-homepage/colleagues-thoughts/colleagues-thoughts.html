@@ -1,1 +1,26 @@
-<p>colleagues-thoughts works!</p>
+<section class="testimonials">
+    <header class="testimonials-heading">
+        <p>IN THEIR WORDS:</p>
+        <h2>Colleagues' Thoughts</h2>
+    </header>
+
+    <div class="testimonial-list">
+        @for (testimonial of testimonials; track testimonial.name) {
+        <article class="testimonial-card">
+            <p class="testimonial-quote">{{ testimonial.quote }}</p>
+
+            <div class="testimonial-author">
+                <div>
+                    <h3>{{ testimonial.name }}</h3>
+                    <p>{{ testimonial.role }}</p>
+                </div>
+
+                <a [href]="testimonial.profileUrl" target="_blank" rel="noopener noreferrer">
+                    Profile
+                </a>
+            </div>
+        </article>
+
+        }
+    </div>
+</section>
