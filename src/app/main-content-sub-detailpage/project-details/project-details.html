@@ -1,1 +1,54 @@
-<p>Project ID: {{ projectId }}</p>
+@if (project) {
+<section class="project-details">
+    <a class="go-back" routerLink="/">← Go back</a>
+    
+    <div class="project-info">
+        <h1>{{ project.title }}</h1>
+
+        <h2>Description</h2>
+        <p>{{ project.description }}</p>
+
+        <h2>Implementation Details</h2>
+        <p>{{ project.implementationDetails }}</p>
+
+        <p class="project-duration">
+            <strong>Duration:</strong> {{ project.duration }}
+        </p>
+
+        <h2>Technologies</h2>
+        <div class="technology-list">
+            @for (technology of project.technologies; track technology) {
+            <span class="technology-chip">{{ technology }}</span>
+            }
+        </div>
+    </div>
+
+    <div class="project-preview">
+        <img [src]="project.image" [alt]="project.title + ' project preview'" />
+
+        <div class="project-actions">
+            @if (project.githubUrl) {
+            <a class="project-link" [href]="project.githubUrl" target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+            }
+
+            @if (project.liveUrl) {
+            <a class="project-link" [href]="project.liveUrl" target="_blank" rel="noopener noreferrer">
+                Live Demo
+            </a>
+            }
+        </div>
+
+        @if (nextProject) {
+        <a class="next-project" [routerLink]="['/projects', nextProject.id]">
+            Next Project →
+        </a>
+        }
+
+    </div>
+
+</section>
+} @else {
+<p class="not-found">Project not found.</p>
+}

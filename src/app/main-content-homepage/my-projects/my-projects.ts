@@ -9,7 +9,7 @@ interface Project {
 }
 
 @Component({
-  imports: [ ProjectDetailsButton ],
+  imports: [ProjectDetailsButton],
   selector: 'app-my-projects',
   styleUrl: './my-projects.scss',
   templateUrl: './my-projects.html',
@@ -30,7 +30,7 @@ export class MyProjects {
     id: 'join',
     title: 'Join',
     description:
-      'A Kanban-style task manager to create, organize, and track tasks.',
+      'Join is an Angular application where users can sign in and then create and manage tasks and contacts, with all data stored in Firebase. Tasks can be moved between different statuses by simple drag & drop.',
     image: '/images/Projects/Join.png',
     sticker: '/images/Projects/ENV_Sticker.png',
   };
@@ -39,14 +39,14 @@ export class MyProjects {
     id: 'sharkie',
     title: 'Sharkie',
     description:
-      'An underwater game where Sharkie explores the ocean and faces sea creatures.',
+      'Sharkie is a JavaScript application built around Object-Oriented Programming (OOP). It shows how to organize code with classes, inheritance and encapsulation, resulting in an application that is modular and easy to scale.',
     image: '/images/Projects/Sharkie.png',
   },
   {
     id: 'pokodex',
     title: 'Pokédex',
     description:
-      'A Pokédex app to search Pokémon and view their profiles and types.',
+      'Pokedex is a JavaScript project centered on working with a REST API. It shows how to request data from external APIs, process it, and render it dynamically in the interface.',
     image: '/images/Projects/Pokodex.png',
   }];
 }
