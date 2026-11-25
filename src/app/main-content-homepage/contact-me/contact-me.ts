@@ -1,5 +1,19 @@
 import { Component } from '@angular/core';
 
+type ContactResponse = {
+  success?: boolean;
+  error?: string;
+};
+
+function isContactResponse(value: unknown): value is ContactResponse {
+  return (
+    typeof value === 'object' &&
+    value !== null &&
+    (!('success' in value) || typeof value.success === 'boolean') &&
+    (!('error' in value) || typeof value.error === 'string')
+  );
+}
+
 @Component({
   imports: [],
   selector: 'app-contact-me',
@@ -34,7 +48,43 @@ export class ContactMe {
 
   };
 
-  onSubmit(event: SubmitEvent): void {
+  async onSubmit(event: SubmitEvent): Promise<void> {
     event.preventDefault();
+
+    const form = event.currentTarget;
+    if (!(form instanceof HTMLFormElement) || !form.reportValidity()) {
+      return;
+    }
+
+    const formData = new FormData(form);
+    const payload = {
+      name: String(formData.get('name') ?? '').trim(),
+      email: String(formData.get('email') ?? '').trim(),
+      message: String(formData.get('message') ?? '').trim(),
+    };
+
+    try {
+      const response = await fetch('http://localhost:8000/contact.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result: unknown = await response.json();
+
+      if (!isContactResponse(result)) {
+        throw new Error('PHP endpoint nunchi valid response raledu.');
+      }
+
+      if (!response.ok || result.success !== true) {
+        throw new Error(result.error ?? `Request failed: ${response.status}`);
+      }
+
+      console.info('PHP contact endpoint request accept chesindi.');
+    } catch (error) {
+      console.error('Contact form submit failed:', error);
+    }
   }
 }
