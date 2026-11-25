@@ -1,0 +1,181 @@
+.contact {
+    box-sizing: border-box;
+    min-height: 650px;
+    padding: 100px 24px 48px;
+    overflow: hidden;
+    color: #f7f7f7;
+    background-color: #FFFFFF;
+
+    &--textured {
+        background-image: url('/images/01_Background/Design%20Size%20Relation@3x/06_Contact.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__container {
+        width: min(1100px, 100%);
+        margin: 0 auto;
+    }
+
+    &__main {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+        gap: clamp(48px, 10vw, 130px);
+        align-items: center;
+    }
+
+    &__copy {
+        max-width: 500px;
+    }
+
+    &__eyebrow {
+        margin: 0 0 12px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    &__copy h2 {
+        max-width: 480px;
+        margin: 0 0 32px;
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        line-height: 1.05;
+    }
+
+    &__copy>p:not(.contact__eyebrow) {
+        margin: 0 0 18px;
+        line-height: 1.5;
+    }
+
+    &__arrow {
+        display: block;
+        width: min(230px, 70%);
+        height: auto;
+        margin: 32px 0 0 auto;
+        filter: brightness(0) saturate(100%) invert(83%) sepia(88%) saturate(1450%) hue-rotate(2deg) brightness(102%) contrast(104%);
+    }
+
+    &__form {
+        position: relative;
+        display: grid;
+        gap: 18px;
+        padding-top: 100px;
+
+        // Decorative orange sticker and logo.
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 112px;
+            aspect-ratio: 1;
+            background-image:
+                url('/icons/letter-n.png'),
+                url('/images/03_Stickers/00_Round/01_Color%20option%201-%20Orange.png');
+            background-position: center, center;
+            background-repeat: no-repeat;
+            background-size: 34px 34px, contain;
+        }
+    }
+
+    &__field {
+        display: grid;
+        gap: 8px;
+        padding: 0 14px 10px;
+        border-bottom: 1px solid #d5ad00;
+
+        label {
+            font-size: 19px;
+            font-weight: 500;
+        }
+
+        input,
+        textarea {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            color: #f7f7f7;
+            background: transparent;
+            font: inherit;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #c7c7c7;
+            opacity: 1;
+        }
+
+        &:focus-within {
+            border-bottom: 2px solid #ffd21f;
+        }
+    }
+
+    &__consent {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 4px;
+        color: #ddd;
+        font-size: 13px;
+        line-height: 1.4;
+
+        input {
+            flex: 0 0 auto;
+            width: 16px;
+            height: 16px;
+            margin: 1px 0 0;
+            accent-color: #315dff;
+        }
+    }
+
+    &__submit {
+        justify-self: end;
+        min-width: 120px;
+        margin-top: 8px;
+        padding: 9px 24px;
+        border: 2px solid #777;
+        border-radius: 999px;
+        color: #f7f7f7;
+        background: transparent;
+        font: inherit;
+        cursor: pointer;
+
+        &:hover,
+        &:focus-visible {
+            border-color: #ffd21f;
+            background: #ffffff12;
+        }
+
+        &:focus-visible {
+            outline: 2px solid #ffd21f;
+            outline-offset: 4px;
+        }
+    }
+
+    @media (max-width: 760px) {
+        padding: 72px 20px 36px;
+
+        &__main {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        &__copy {
+            max-width: none;
+
+            h2 {
+                max-width: 420px;
+            }
+        }
+
+        &__arrow {
+            margin-top: 20px;
+        }
+    }
+}
