@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 type ContactResponse = {
   success?: boolean;
@@ -15,27 +16,24 @@ function isContactResponse(value: unknown): value is ContactResponse {
 }
 
 @Component({
-  imports: [],
+  imports: [TranslatePipe],
   selector: 'app-contact-me',
   styleUrl: './contact-me.scss',
   templateUrl: './contact-me.html',
 })
 export class ContactMe {
   readonly content = {
-    eyebrow: 'CONTACT ME',
-    title: 'Ready to work together?',
-    paragraphs: [
-      'I enjoy building accessible, responsive web experiences. If you have a project or role in mind, tell me a little about it.',
-      'I’d be happy to discuss how my experience and skills could contribute to your team.',
-    ],
-    nameLabel: 'What’s your name?',
-    namePlaceholder: 'Your name goes here',
-    emailLabel: 'What’s your email?',
-    emailPlaceholder: 'youremail@email.com',
-    messageLabel: 'How can I help you?',
-    messagePlaceholder: 'Tell me a little about your project...',
-    consent: 'I agree that my details can be used to respond to this message.',
-    sendLabel: 'Send',
+    eyebrow: 'contact.eyebrow',
+    title: 'contact.title',
+    paragraphs: ['contact.paragraph1', 'contact.paragraph2'],
+    nameLabel: 'contact.nameLabel',
+    namePlaceholder: 'contact.namePlaceholder',
+    emailLabel: 'contact.emailLabel',
+    emailPlaceholder: 'contact.emailPlaceholder',
+    messageLabel: 'contact.messageLabel',
+    messagePlaceholder: 'contact.messagePlaceholder',
+    consent: 'contact.consent',
+    sendLabel: 'contact.sendLabel',
 
   };
 

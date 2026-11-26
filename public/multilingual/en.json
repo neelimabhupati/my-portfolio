@@ -38,5 +38,28 @@
         "sharkieDescription": "Sharkie is a JavaScript application built around Object-Oriented Programming (OOP). It shows how to organize code with classes, inheritance and encapsulation, resulting in an application that is modular and easy to scale.",
         "pokedexDescription": "Pokedex is a JavaScript project centered on working with a REST API. It shows how to request data from external APIs, process it, and render it dynamically in the interface.",
         "details": "Project details"
+    },
+    "testimonials": {
+        "eyebrow": "IN THEIR WORDS",
+        "heading": "Colleagues' Thoughts",
+        "profile": "Profile",
+        "quote1": "Neelima always greets everyone with a warm smile and never leaves a question unanswered – she asks actively and with real curiosity. In our team she was a dependable teammate who, with persistence and effort, delivered more than expected. I’m convinced she will give her best to reach her goals wherever she goes.",
+        "role1": "Fullstack developer",
+        "quote2": "Working with Neelima was a great experience! She is dedicated, hardworking, and always brings a positive attitude to the team. Her commitment and reliability made her a valuable part of our project.",
+        "role2": "Frontend developer"
+    },
+    "contact": {
+        "eyebrow": "CONTACT ME",
+        "title": "Ready to work together?",
+        "paragraph1": "I enjoy building accessible, responsive web experiences. If you have a project or role in mind, tell me a little about it.",
+        "paragraph2": "I’d be happy to discuss how my experience and skills could contribute to your team.",
+        "nameLabel": "What’s your name?",
+        "namePlaceholder": "Your name goes here",
+        "emailLabel": "What’s your email?",
+        "emailPlaceholder": "youremail@email.com",
+        "messageLabel": "How can I help you?",
+        "messagePlaceholder": "Tell me a little about your project...",
+        "consent": "I agree that my details can be used to respond to this message.",
+        "sendLabel": "Send"
     }
 }

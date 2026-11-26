@@ -38,5 +38,28 @@
         "sharkieDescription": "Sharkie ist eine JavaScript-Anwendung, die auf objektorientierter Programmierung (OOP) basiert. Sie zeigt, wie sich Code mit Klassen, Vererbung und Kapselung strukturieren lässt, sodass eine modulare und skalierbare Anwendung entsteht.",
         "pokedexDescription": "Pokédex ist ein JavaScript-Projekt, das eine REST-API nutzt. Es zeigt, wie Daten von externen APIs angefordert, verarbeitet und dynamisch in der Benutzeroberfläche dargestellt werden.",
         "details": "Projekt Angabe"
+    },
+    "testimonials": {
+        "eyebrow": "DAS SAGEN ANDERE",
+        "heading": "Stimmen von Kolleginnen und Kollegen",
+        "profile": "Profil",
+        "quote1": "Neelima begrüßt alle stets mit einem herzlichen Lächeln und lässt keine Frage unbeantwortet – sie fragt aktiv und mit echter Neugier nach. In unserem Team war sie eine zuverlässige Kollegin, die mit Ausdauer und Einsatz mehr als erwartet geleistet hat. Ich bin überzeugt, dass sie überall ihr Bestes geben wird, um ihre Ziele zu erreichen.",
+        "role1": "Fullstack-Entwickler",
+        "quote2": "Die Zusammenarbeit mit Neelima war eine großartige Erfahrung! Sie ist engagiert, fleißig und bringt stets eine positive Einstellung ins Team. Ihr Einsatz und ihre Zuverlässigkeit machten sie zu einem wertvollen Teil unseres Projekts.",
+        "role2": "Frontend-Entwickler"
+    },
+    "contact": {
+        "eyebrow": "KONTAKT",
+        "title": "Lust auf eine Zusammenarbeit?",
+        "paragraph1": "Ich entwickle gerne zugängliche, responsive Web-Erlebnisse. Wenn du ein Projekt oder eine passende Stelle hast, erzähl mir gerne davon.",
+        "paragraph2": "Gerne bespreche ich, wie meine Erfahrung und Fähigkeiten dein Team unterstützen können.",
+        "nameLabel": "Wie heißt du?",
+        "namePlaceholder": "Dein Name",
+        "emailLabel": "Wie lautet deine E-Mail-Adresse?",
+        "emailPlaceholder": "deine.email@beispiel.de",
+        "messageLabel": "Wie kann ich dir helfen?",
+        "messagePlaceholder": "Erzähl mir etwas über dein Projekt ...",
+        "consent": "Ich bin damit einverstanden, dass meine Angaben zur Beantwortung dieser Nachricht verwendet werden.",
+        "sendLabel": "Senden"
     }
 }

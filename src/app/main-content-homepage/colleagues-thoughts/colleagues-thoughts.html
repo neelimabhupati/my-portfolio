@@ -1,23 +1,22 @@
 <section class="testimonials">
     <header class="testimonials-heading">
-        <p>IN THEIR WORDS</p>
+        <p>{{ 'testimonials.eyebrow' | translate }}</p>
         <img class="testimonials-arrow" src="/images/03_Stickers/Blue_arrow.png" alt="" aria-hidden="true" />
-        <h2>Colleagues' Thoughts</h2>
+        <h2>{{ 'testimonials.heading' | translate }}</h2>
     </header>
 
     <div class="testimonial-list">
         @for (testimonial of testimonials; track testimonial.name) {
         <article class="testimonial-card">
-            <p class="testimonial-quote">{{ testimonial.quote }}</p>
-
+            <h2>{{ 'testimonials.heading' | translate }}</h2>
             <div class="testimonial-author">
                 <div>
                     <h3>{{ testimonial.name }}</h3>
-                    <p>{{ testimonial.role }}</p>
+                    <p class="testimonial-quote">{{ testimonial.quote | translate }}</p>
                 </div>
 
                 <a [href]="testimonial.profileUrl" target="_blank" rel="noopener noreferrer">
-                    Profile
+                    {{ 'testimonials.profile' | translate }}
                 </a>
             </div>
         </article>
