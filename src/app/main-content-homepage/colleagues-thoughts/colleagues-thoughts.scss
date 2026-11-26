@@ -119,59 +119,105 @@
             opacity: 1;
         }
     }
-}
-
-@media (max-width: 850px) {
-  .testimonials {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 36px 16px;
-    overflow-x: hidden;
-  }
-
-  .testimonial-list {
-    width: 100%;
-    min-height: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-  }
-
-  .testimonial-card {
-    box-sizing: border-box;
-    flex: none;
-    width: calc(100% - 24px);
-    max-width: 360px;
-    height: auto;
-    min-height: 280px;
-    margin: 0;
-    padding: 24px;
 
     &:nth-child(1) {
-      z-index: 1;
-      transform: none;
+        z-index: 1;
+        transform: rotate(-4deg);
     }
 
     &:nth-child(2) {
-      z-index: 2;
-      transform: none;
+        z-index: 2;
+        transform: none;
     }
 
     &:nth-child(3) {
-      z-index: 3;
-      transform: none;
-    }
-
-    &:not(:first-child) {
-      margin-top: -16px;
+        z-index: 3;
+        transform: rotate(4deg);
     }
 
     &:hover,
     &:focus-within {
-      z-index: 10;
-      transform: scale(1.02);
+        z-index: 10;
+        transform: translateY(-12px) scale(1.04) rotate(0deg);
+        box-shadow: 0 12px 24px #0004;
+
+        &::after {
+            opacity: 1;
+        }
     }
-  }
+}
+
+@media (max-width: 850px) {
+    .testimonials {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 36px 16px;
+        overflow-x: hidden;
+    }
+
+    .testimonial-list {
+        width: 100%;
+        min-height: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .testimonial-card {
+        box-sizing: border-box;
+        flex: none;
+        width: calc(100% - 24px);
+        max-width: 360px;
+        height: auto;
+        min-height: 280px;
+        margin: 0;
+        padding: 24px;
+
+        &:nth-child(1) {
+            z-index: 1;
+            transform: none;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            align-self: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &:not(:first-child) {
+            margin-top: -16px;
+        }
+
+        &:hover,
+        &:focus-within {
+            z-index: 10;
+            transform: scale(1.02);
+        }
+
+        &:nth-child(1) {
+            z-index: 1;
+            transform: rotate(4deg);
+        }
+
+        &:nth-child(2) {
+            z-index: 2;
+            transform: none;
+        }
+
+        &:nth-child(3) {
+            z-index: 3;
+            transform: rotate(-4deg);
+        }
+
+        &:hover,
+        &:focus-within {
+            z-index: 10;
+            transform: scale(1.02) rotate(0deg);
+        }
+
+
+    }
 }
 
 @media (max-width: 480px) {
@@ -179,5 +225,3 @@
         font-size: 13px;
     }
 }
-
-
