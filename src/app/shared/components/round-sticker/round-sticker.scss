@@ -1,0 +1,43 @@
+:host {
+    position: relative;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    overflow: clip;
+    background: url('/images/03_Stickers/00_Round/01_Color option 1- Orange.png') center / contain no-repeat;
+}
+
+.sticker-ring {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    fill: var(--color-base-dark);
+    animation: ring-spin 20s linear infinite;
+}
+
+@keyframes ring-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sticker-ring {
+        animation: none;
+    }
+}
+
+.sticker-monogram {
+    position: absolute;
+    z-index: 2;
+    width: 34%;
+    height: 34%;
+    object-fit: contain;
+    transform: rotate(10deg);
+}
+
+.sticker-ring {
+    z-index: 1;
+}

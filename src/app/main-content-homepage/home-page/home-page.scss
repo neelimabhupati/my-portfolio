@@ -2,13 +2,30 @@
   min-height: 100vh;
   background-image: url('/images/hero-bg.jpg');
   background-size: cover;
-  background-position:  bottom;
+  background-position: bottom;
   background-repeat: no-repeat;
   padding: 30px 50px;
 }
 
 .contact-footer {
+  position: relative;
   background: white
     url('/images/01_Background/Design%20Size%20Relation@3x/06_Contact.png')
     center top / cover no-repeat;
+
+  app-round-sticker {
+    position: absolute;
+    z-index: 10;
+    top: 100px;
+    right: clamp(20px, 8vw, 85px);
+    width: 110px;
+  }
+
+  @media (max-width: 760px) {
+    app-round-sticker {
+      top: 45px;
+      right: 20px;
+      width: 90px;
+    }
+  }
 }

@@ -64,22 +64,6 @@
         gap: 18px;
         padding-top: 100px;
 
-        // Decorative orange sticker and logo.
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 112px;
-            aspect-ratio: 1;
-            background-image:
-                url('/icons/letter-n.png'),
-                url('/images/03_Stickers/00_Round/01_Color%20option%201-%20Orange.png');
-
-            background-position: center, center;
-            background-repeat: no-repeat;
-            background-size: 34px 34px, contain;
-        }
     }
 
     &__field {
@@ -162,9 +146,6 @@
         }
     }
 
-    &__sticker {
-        display: none;
-    }
 
     &__arrow--mobile {
         display: none;
@@ -210,37 +191,6 @@
 
         &__eyebrow {
             margin: 0;
-        }
-
-        &__sticker {
-            display: block;
-            position: relative;
-            flex: 0 0 64px;
-            width: 64px;
-            aspect-ratio: 1;
-        }
-
-        &__sticker-art,
-        &__sticker-logo {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        &__sticker-art {
-            inset: 0;
-        }
-
-        &__sticker-logo {
-            inset: 22%;
-            width: 56%;
-            height: 56%;
-        }
-
-        &__form::before {
-            display: none;
-
         }
 
         &__main {

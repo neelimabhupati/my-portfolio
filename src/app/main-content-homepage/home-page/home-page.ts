@@ -6,10 +6,11 @@ import { Skillset } from '../skillset/skillset';
 import { MyProjects } from '../my-projects/my-projects';
 import { ColleaguesThoughts } from '../colleagues-thoughts/colleagues-thoughts';
 import { ContactMe } from '../contact-me/contact-me';
+import { RoundSticker } from '../../shared/components/round-sticker/round-sticker';
 import { Footer } from '../../shared/components/footer/footer';
 
 @Component({
-  imports: [Header, Hero, Aboutme, Skillset, MyProjects, ColleaguesThoughts, ContactMe, Footer ],
+  imports: [Header, Hero, Aboutme, Skillset, MyProjects, ColleaguesThoughts, ContactMe, Footer ,RoundSticker ],
   selector: 'app-home-page',
   styleUrl: './home-page.scss',
   templateUrl: './home-page.html',
