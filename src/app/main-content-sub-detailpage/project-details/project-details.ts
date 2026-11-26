@@ -1,5 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { RoundSticker } from '../../shared/components/round-sticker/round-sticker';
+import { Header } from '../../shared/components/header/header';
 
 interface Project {
   id: string;
@@ -14,7 +16,7 @@ interface Project {
 }
 
 @Component({
-  imports: [RouterLink],
+  imports: [RouterLink , RoundSticker, Header ],
   selector: 'app-project-details',
   styleUrl: './project-details.scss',
   templateUrl: './project-details.html',

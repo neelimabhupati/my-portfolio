@@ -1,7 +1,9 @@
+<app-header class="project-details-header"></app-header>
+
 @if (project) {
 <section class="project-details">
     <a class="go-back" routerLink="/">← Go back</a>
-    
+
     <div class="project-info">
         <h1>{{ project.title }}</h1>
 
@@ -24,7 +26,13 @@
     </div>
 
     <div class="project-preview">
-        <img [src]="project.image" [alt]="project.title + ' project preview'" />
+        <div class="project-image-wrap">
+            @if (project.id === 'sharkie' || project.id === 'pokodex') {
+            <app-round-sticker class="project-sticker"></app-round-sticker>
+            }
+            <img [src]="project.image" [alt]="project.title + ' project preview'" />
+
+        </div>
 
         <div class="project-actions">
             @if (project.githubUrl) {
