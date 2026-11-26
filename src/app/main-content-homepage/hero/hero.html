@@ -2,7 +2,7 @@
     <div class="hero_content">
         <button class="hero_greetings" [class.expanded]="greetingExpanded()" [attr.aria-expanded]="greetingExpanded()"
             (mouseenter)="showGreeting()" (mouseleave)="hideGreeting()" (focus)="showGreeting()"
-            (blur)="hideGreeting()">{{ greetingExpanded() ? "I'm Neelima Bhupati" : greeting }}
+            (blur)="hideGreeting()">{{ (greetingExpanded() ? 'hero.greetingExpanded' : 'hero.greeting') | translate }}
         </button>
         @if (greetingExpanded()) {
         <span class="hero_greeting_emoji" aria-hidden="true">🙋🏻‍♀️</span>
@@ -24,14 +24,16 @@
             </span>
         </h1>
 
-        <button class="hero_contact" type="button" (click)="contactMe()"> Get in Touch</button>
+        <button class="hero_contact" type="button" (click)="contactMe()">
+            {{ 'hero.getInTouch' | translate }}
+        </button>
     </div>
 
     <figure class="hero_photo">
         <img src="./images/Neelima.jpeg" alt="Neelima image" />
         <figcaption>
-            <span>Neelima 🙂</span>
-            <span>Neelima 😄</span>
+            <span>{{ 'hero.photoCaption' | translate }} 🙂</span>
+            <span>{{ 'hero.photoCaption' | translate }} 😄</span>
         </figcaption>
     </figure>
 

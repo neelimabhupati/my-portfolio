@@ -1,8 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { SOCIAL_LINKS } from '../../shared/data/social-links/social-links';
-
+import { TranslatePipe } from '@ngx-translate/core';
 @Component({
-  imports: [],
+  imports: [ TranslatePipe],
   selector: 'app-hero',
   styleUrl: './hero.scss',
   templateUrl: './hero.html',

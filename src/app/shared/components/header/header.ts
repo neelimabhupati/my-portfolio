@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { SOCIAL_LINKS } from '../../data/social-links/social-links';
-
+import { Languages } from '../languages/languages';
+import { TranslatePipe } from '@ngx-translate/core';
 @Component({
-  imports: [],
+  imports: [Languages, TranslatePipe],
   selector: 'app-header',
   styleUrl: './header.scss',
   templateUrl: './header.html',

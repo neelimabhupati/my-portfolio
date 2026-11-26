@@ -1,0 +1,14 @@
+{
+    "header": {
+        "aboutMe": "Über mich",
+        "skills": "Fähigkeiten",
+        "projects": "Projekte",
+        "contact": "Kontakt"
+    },
+    "hero": {
+        "greeting": "Hallo Welt",
+        "greetingExpanded": "Ich bin Neelima Bhupati",
+        "getInTouch": "Kontakt aufnehmen",
+        "photoCaption": "Frau Neelima "
+    }
+}

@@ -13,15 +13,14 @@
     </button>
 
     <nav class="nav" aria-label="Main navigation">
-        <a href="" (click)="closeMenu()">About me</a>
-        <a href="" (click)="closeMenu()">Skills</a>
-        <a href="" (click)="closeMenu()">Projects</a>
-        <a href="" (click)="closeMenu()">Contact</a>
+        <a href="" (click)="closeMenu()">{{ 'header.aboutMe' | translate }}</a>
+        <a href="" (click)="closeMenu()">{{ 'header.skills' | translate }}</a>
+        <a href="" (click)="closeMenu()">{{ 'header.projects' | translate }}</a>
+        <a href="" (click)="closeMenu()">{{ 'header.contact' | translate }}</a>
     </nav>
 
     <div class="language-switcher" aria-label="Switch language">
-        <button type="button" aria-pressed="true">DE</button>
-        <button type="button" aria-pressed="false">EN</button>
+        <app-languages></app-languages>
     </div>
 
     <div class="header-socials">
@@ -31,5 +30,5 @@
         </a>
         }
     </div>
-    
+
 </header>
