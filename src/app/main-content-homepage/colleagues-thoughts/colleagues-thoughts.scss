@@ -4,6 +4,7 @@
 }
 
 .testimonials-heading {
+    position: relative;
     max-width: 1100px;
     margin: 0 auto 32px;
     text-align: right;
@@ -17,6 +18,14 @@
         margin: 8px 0 0;
         font-size: clamp(2rem, 5vw, 3rem);
     }
+}
+
+.testimonials-arrow {
+    position: absolute;
+    top: -10px;
+    right: 120px;
+    width: 90px;
+    height: auto;
 }
 
 .testimonial-list {
@@ -43,20 +52,6 @@
         margin-left: -90px;
     }
 
-    &:nth-child(1) {
-        z-index: 1;
-        transform: rotate(-9deg);
-    }
-
-    &:nth-child(2) {
-        z-index: 2;
-        transform: rotate(1deg);
-    }
-
-    &:nth-child(3) {
-        z-index: 1;
-        transform: rotate(8deg);
-    }
 }
 
 .testimonial-quote {
@@ -109,16 +104,6 @@
         z-index: 2;
     }
 
-    &:hover,
-    &:focus-within {
-        z-index: 10;
-        transform: scale(1.04) rotate(0deg);
-        box-shadow: 0 12px 24px #0004;
-
-        &::after {
-            opacity: 1;
-        }
-    }
 
     &:nth-child(1) {
         z-index: 1;
@@ -173,11 +158,6 @@
         margin: 0;
         padding: 24px;
 
-        &:nth-child(1) {
-            z-index: 1;
-            transform: none;
-        }
-
         &:nth-child(2),
         &:nth-child(3) {
             align-self: center;
@@ -187,12 +167,6 @@
 
         &:not(:first-child) {
             margin-top: -16px;
-        }
-
-        &:hover,
-        &:focus-within {
-            z-index: 10;
-            transform: scale(1.02);
         }
 
         &:nth-child(1) {
@@ -215,7 +189,6 @@
             z-index: 10;
             transform: scale(1.02) rotate(0deg);
         }
-
 
     }
 }
