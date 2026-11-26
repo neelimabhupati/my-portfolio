@@ -2,13 +2,20 @@
     <div class="contact__container">
         <div class="contact__main">
             <div class="contact__copy">
-                <p class="contact__eyebrow">{{ content.eyebrow }}</p>
+                <div class="contact__eyebrow-row">
+                    <p class="contact__eyebrow">{{ content.eyebrow }}</p>
+
+                    <span class="contact__sticker" aria-hidden="true">
+                        <img class="contact__sticker-art" [src]="assets.sticker" alt="" />
+                        <img class="contact__sticker-logo" [src]="assets.stickerLogo" alt="" />
+                    </span>
+                </div>
+
                 <h2 id="contact-title">{{ content.title }}</h2>
 
                 @for (paragraph of content.paragraphs; track paragraph) {
                 <p>{{ paragraph }}</p>
                 }
-
                 <img class="contact__arrow" [src]="assets.arrow" alt="" />
             </div>
 
@@ -36,9 +43,12 @@
                     <span>{{ content.consent }}</span>
                 </label>
 
-                <button class="contact__submit" type="submit">
-                    {{ content.sendLabel }}
-                </button>
+                <div class="contact__actions">
+                    <img class="contact__arrow--mobile" [src]="assets.arrow" alt="" />
+                    <button class="contact__submit" type="submit">
+                        {{ content.sendLabel }}
+                    </button>
+                </div>
             </form>
         </div>
     </div>

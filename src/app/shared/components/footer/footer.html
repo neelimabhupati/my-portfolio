@@ -1,1 +1,19 @@
-<p>footer works!</p>
+<footer class="site-footer">
+    <div class="site-footer__inner">
+        <div class="site-footer__brand">
+            <a [href]="footerData.homeUrl" [attr.aria-label]="footerData.logoAlt">
+                <img [src]="footerData.logoSrc" [alt]="footerData.logoAlt" />
+            </a>
+            <p>{{ footerData.copyright }} {{ footerData.year }}</p>
+        </div>
+
+        <nav class="site-footer__links" aria-label="Footer links">
+            @for (link of footerData.links; track link.label) {
+            <a [href]="link.href" [attr.target]="link.external ? '_blank' : null"
+                [attr.rel]="link.external ? 'noopener noreferrer' : null">
+                {{ link.label }}
+            </a>
+            }
+        </nav>
+    </div>
+</footer>

@@ -1,0 +1,96 @@
+.site-footer {
+    width: 100%;
+    box-sizing: border-box;
+    color: #f5f5f5;
+    background: transparent url('/images/01_Background/Img%20Original%20Size/Footer.png') center / cover no-repeat;
+
+    &__inner {
+        width: min(1100px, 100%);
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 24px clamp(20px, 4vw, 48px) 32px;
+    }
+
+    &__brand {
+        img {
+            display: block;
+            width: 32px;
+            height: 36px;
+            object-fit: contain;
+        }
+
+        p {
+            margin: 10px 0 0;
+            font-weight: 600;
+        }
+    }
+
+    &__links {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+        text-align: center;
+
+        a:first-child {
+            text-align: left;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover,
+            &:focus-visible {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        &__inner {
+            padding: 24px 20px;
+        }
+
+        &__brand {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+
+            p {
+                margin: 0;
+                text-align: right;
+                font-size: 14px;
+            }
+        }
+
+        &__links {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            row-gap: 24px;
+            margin-top: 4px;
+            font-size: 14px;
+
+            a:first-child {
+                grid-column: 3;
+                grid-row: 1;
+                text-align: right;
+            }
+
+            a:nth-child(2) {
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            a:nth-child(3) {
+                grid-column: 2;
+                grid-row: 2;
+            }
+
+            a:nth-child(4) {
+                grid-column: 3;
+                grid-row: 2;
+            }
+        }
+    }
+}
