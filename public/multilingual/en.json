@@ -10,5 +10,33 @@
         "greetingExpanded": "I'm Neelima Bhupati",
         "getInTouch": "Get in Touch",
         "photoCaption": "Neelima "
+    },
+    "about": {
+        "eyebrow": "WHO'S NEELIMA?",
+        "heading": "About me",
+        "cta": "Let's talk",
+        "basedIn": "Based in Munich",
+        "relocate": "Open to relocate",
+        "remote": "Open to remote work",
+        "paragraph1": "I have 7.5 years of experience in IT as a C++ developer.",
+        "paragraph2": "Web development has interested me since the beginning of my career, and I'm now following that interest by growing into a frontend developer."
+    },
+    "skillset": {
+        "eyebrow": "MY STACK",
+        "heading": "Skill set",
+        "description": "Experienced in creating practical projects across a range of frontend technologies and UI concepts. I maintain a continuous learning mindset, regularly exploring new tools and techniques to grow my capabilities.",
+        "peelInstruction": "Click to peel",
+        "peelMessage": "Also, I'm interested in diving into:"
+    },
+    "projects": {
+        "eyebrow": "MY CRAFT",
+        "heading": "Projects",
+        "intro1": "Three projects, three ways to see how I build for the web. Take a look, click around and try them out yourself.",
+        "intro2": "Fight through three increasingly hard levels in a fantasy jump-and-run, find out who your favourite Pokémon is in a Pokédex, or organise your tasks in a kanban board full of clever little features.",
+        "intro3": "Go ahead and give them a try!",
+        "joinDescription": "Join is an Angular application where users can sign in and then create and manage tasks and contacts, with all data stored in Firebase. Tasks can be moved between different statuses by simple drag & drop.",
+        "sharkieDescription": "Sharkie is a JavaScript application built around Object-Oriented Programming (OOP). It shows how to organize code with classes, inheritance and encapsulation, resulting in an application that is modular and easy to scale.",
+        "pokedexDescription": "Pokedex is a JavaScript project centered on working with a REST API. It shows how to request data from external APIs, process it, and render it dynamically in the interface.",
+        "details": "Project details"
     }
 }

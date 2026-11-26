@@ -1,19 +1,19 @@
 import { Component, signal } from '@angular/core';
-
+import { TranslatePipe } from '@ngx-translate/core';
 @Component({
-  imports: [],
+  imports: [TranslatePipe],
   selector: 'app-skillset',
   styleUrl: './skillset.scss',
   templateUrl: './skillset.html',
 })
 export class Skillset {
-  readonly eyebrow = 'MY STACK';
-  readonly heading = 'Skill set';
+  readonly eyebrow = 'skillset.eyebrow';
+  readonly heading = 'skillset.heading';
   readonly description =
-    'Experienced in creating practical projects across a range of frontend technologies and UI concepts. I maintain a continuous learning mindset, regularly exploring new tools and techniques to grow my capabilities.';
-  readonly peelInstruction = 'Click to peel';
+    'skillset.description';
+  readonly peelInstruction = 'skillset.peelInstruction';
   readonly peeled = signal(false);
-  readonly peelMessage = "Also, I'm interested in diving into:";
+  readonly peelMessage = 'skillset.peelMessage';
 
   readonly peelAssets = {
     front: '/images/03_Stickers/01_Skills%20-%20Peel%20off/Default.png',

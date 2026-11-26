@@ -10,5 +10,33 @@
         "greetingExpanded": "Ich bin Neelima Bhupati",
         "getInTouch": "Kontakt aufnehmen",
         "photoCaption": "Frau Neelima "
+    },
+    "about": {
+        "eyebrow": "WER IST NEELIMA?",
+        "heading": "Über mich",
+        "cta": "Lass uns sprechen",
+        "basedIn": "Ich lebe in München",
+        "relocate": "Umzugsbereit",
+        "remote": "Offen für Remote-Arbeit",
+        "paragraph1": "Ich habe 7,5 Jahre Erfahrung in der IT als C++-Entwicklerin.",
+        "paragraph2": "Webentwicklung hat mich von Beginn meiner Karriere an interessiert. Jetzt folge ich diesem Interesse und entwickle mich zur Frontend-Entwicklerin weiter."
+    },
+    "skillset": {
+        "eyebrow": "MEIN TECH-STACK",
+        "heading": "Fähigkeiten",
+        "description": "Ich habe praktische Projekte mit verschiedenen Frontend-Technologien und UI-Konzepten umgesetzt. Dabei lerne ich kontinuierlich weiter und erkunde regelmäßig neue Tools und Techniken, um meine Fähigkeiten auszubauen.",
+        "peelInstruction": "Zum Abziehen klicken",
+        "peelMessage": "Außerdem möchte ich mich mit Folgendem beschäftigen:"
+    },
+    "projects": {
+        "eyebrow": "MEINE ARBEITEN",
+        "heading": "Projekte",
+        "intro1": "Drei Projekte zeigen auf unterschiedliche Weise, wie ich fürs Web entwickle. Schau dich um, klicke dich durch und probiere sie selbst aus.",
+        "intro2": "Kämpfe dich durch drei immer schwieriger werdende Level in einem Fantasy-Jump-and-Run, entdecke dein Lieblings-Pokémon im Pokédex oder organisiere deine Aufgaben auf einem Kanban-Board mit cleveren Funktionen.",
+        "intro3": "Probier sie einfach aus!",
+        "joinDescription": "Join ist eine Angular-Anwendung, bei der sich Nutzer anmelden und anschließend Aufgaben und Kontakte erstellen und verwalten können. Alle Daten werden in Firebase gespeichert. Aufgaben lassen sich per Drag-and-drop zwischen verschiedenen Status verschieben.",
+        "sharkieDescription": "Sharkie ist eine JavaScript-Anwendung, die auf objektorientierter Programmierung (OOP) basiert. Sie zeigt, wie sich Code mit Klassen, Vererbung und Kapselung strukturieren lässt, sodass eine modulare und skalierbare Anwendung entsteht.",
+        "pokedexDescription": "Pokédex ist ein JavaScript-Projekt, das eine REST-API nutzt. Es zeigt, wie Daten von externen APIs angefordert, verarbeitet und dynamisch in der Benutzeroberfläche dargestellt werden.",
+        "details": "Projekt Angabe"
     }
 }

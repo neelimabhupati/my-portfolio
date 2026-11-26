@@ -2,24 +2,24 @@
     <div class="about-layout">
         <div class="about-statuses">
             @for (status of statusItems; track status.label) {
-                <div [class]="status.className">
-                    <img class="about-status-image" [src]="status.image" alt="" />
-                    <!-- <span aria-hidden="true">{{ status.icon }}</span> -->
-                    <img class="about-status-icon" [src]="status.icon" alt="" />
-                    <span>{{ status.label }}</span>
-                </div>
+            <div [class]="status.className">
+                <img class="about-status-image" [src]="status.image" alt="" />
+                <!-- <span aria-hidden="true">{{ status.icon }}</span> -->
+                <img class="about-status-icon" [src]="status.icon" alt="" />
+                <span>{{ status.label | translate }}</span>
+            </div>
             }
         </div>
 
         <div class="about-copy">
-            <p class="about-eyebrow">{{ eyebrow }}</p>
-            <h2>{{ heading }}</h2>
+            <p class="about-eyebrow">{{ eyebrow | translate }}</p>
+            <h2>{{ heading | translate }}</h2>
 
             @for (paragraph of paragraphs; track $index) {
-                <p>{{ paragraph }}</p>
+            <p>{{ paragraph | translate }}</p>
             }
 
-            <button class="about-cta" type="button">{{ ctaLabel }}</button>
+            <button class="about-cta" type="button">{{ ctaLabel | translate }}</button>
         </div>
     </div>
 </section>

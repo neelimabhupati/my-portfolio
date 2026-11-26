@@ -2,11 +2,11 @@
 
     <div class="skillset-heading">
         <div class="skillset-title">
-            <p class="skillset-eyebrow">{{ eyebrow}}</p>
-            <h2 id="skillset-heading">{{ heading}}</h2>
+            <p class="skillset-eyebrow">{{ eyebrow | translate }}</p>
+            <h2 id="skillset-heading">{{ heading | translate }}</h2>
         </div>
 
-        <p class="skillset-description">{{ description }}</p>
+        <p class="skillset-description">{{ description | translate }}</p>
     </div>
 
     <div class="skillset-content">
@@ -23,16 +23,16 @@
             <span class="peel-front">
                 <img class="peel-art" [src]="peelAssets.front" alt="" />
                 <img class="peel-arrow" [src]="peelAssets.arrow" alt="" />
-                <span>{{ peelInstruction }}</span>
+                <span>{{ peelInstruction | translate }}</span>
             </span>
 
             <span class="peel-transition" aria-hidden="true">
                 <img class="peel-art" [src]="peelAssets.transition" alt="" />
             </span>
-            
+
             <span class="peel-back">
                 <img class="peel-art" [src]="peelAssets.back" alt="" />
-                <span class="peel-message">{{ peelMessage }}</span>
+                <span class="peel-message">{{ peelMessage | translate }}</span>
 
                 <span class="peel-skills">
                     @for (skill of additionalSkills; track skill.name) {
