@@ -32,5 +32,11 @@ export class Hero {
   contactMe(): void {
     window.location.href = 'neelimadocument@gmail.com';
   }
+  showGreeting(): void {
+    this.greetingExpanded.set(true);
+  }
 
+  hideGreeting(): void {
+    this.greetingExpanded.set(false);
+  }
 }

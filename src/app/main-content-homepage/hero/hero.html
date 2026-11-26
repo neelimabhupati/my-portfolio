@@ -1,7 +1,8 @@
 <section class="hero">
     <div class="hero_content">
         <button class="hero_greetings" [class.expanded]="greetingExpanded()" [attr.aria-expanded]="greetingExpanded()"
-            (click)="expandGreeting()">{{ greetingExpanded() ? "I'm Neelima Bhupati" : greeting }}
+            (mouseenter)="showGreeting()" (mouseleave)="hideGreeting()" (focus)="showGreeting()"
+            (blur)="hideGreeting()">{{ greetingExpanded() ? "I'm Neelima Bhupati" : greeting }}
         </button>
         @if (greetingExpanded()) {
         <span class="hero_greeting_emoji" aria-hidden="true">🙋🏻‍♀️</span>
