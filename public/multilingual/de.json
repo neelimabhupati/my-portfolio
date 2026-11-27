@@ -61,5 +61,34 @@
         "messagePlaceholder": "Erzähl mir etwas über dein Projekt ...",
         "consent": "Ich bin damit einverstanden, dass meine Angaben zur Beantwortung dieser Nachricht verwendet werden.",
         "sendLabel": "Senden"
+    },
+    "projectDetails": {
+        "goBack": "← Zurück",
+        "description": "Beschreibung",
+        "implementationDetails": "Details zur Umsetzung",
+        "duration": "Projektdauer:",
+        "technologies": "Technologien",
+        "previewAlt": "Projektvorschau von {{title}}",
+        "github": "GitHub",
+        "liveDemo": "Live-Demo",
+        "nextProject": "Nächstes Projekt →",
+        "notFound": "Projekt nicht gefunden.",
+        "projects": {
+            "join": {
+                "description": "Join ist eine Angular-Anwendung, in der Nutzer Aufgaben und Kontakte erstellen und verwalten können. Die Daten werden in Firebase gespeichert. Aufgaben lassen sich per Drag-and-drop zwischen Status verschieben.",
+                "implementationDetails": "Nach der Anmeldung können Nutzer Aufgaben und Kontakte verwalten. Die Daten werden in Firebase gespeichert; Aufgaben lassen sich per Drag-and-drop zwischen Status verschieben.",
+                "duration": "Projektdauer noch nicht eingetragen"
+            },
+            "sharkie": {
+                "description": "Führe Sharkie durch Schwärme von Kugelfischen und Quallen und stelle dich dem Endgegner, dem bösen Orca Stressed Willy!",
+                "implementationDetails": "Sharkie wurde mit JavaScript entwickelt und folgt den Prinzipien der objektorientierten Programmierung (OOP). Klassen, Vererbung und Kapselung sorgen für eine modulare und erweiterbare Anwendung.",
+                "duration": "Projektdauer noch nicht eingetragen"
+            },
+            "pokodex": {
+                "description": "Der Pokédex ist eine Webanwendung, in der Pokémon und detaillierte Informationen angezeigt werden. Die Daten werden dynamisch geladen und interaktiv dargestellt.",
+                "implementationDetails": "Dieses Projekt konzentriert sich auf JavaScript und die Nutzung einer REST-API. Es ruft Daten von einer externen API ab, verarbeitet sie und zeigt sie dynamisch an.",
+                "duration": "Projektdauer noch nicht eingetragen"
+            }
+        }
     }
 }

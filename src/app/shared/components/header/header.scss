@@ -6,6 +6,25 @@
     color: #fff;
 }
 
+:host {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.372);
+    transition: background-color 0.4s ease;
+}
+
+:host(.scrolled) {
+    background-color: rgba(23, 23, 23, 0.95);
+}
+
+// project-details page lo first 2 links black, dark background mida kanipinchavu
+:host(.project-details-header.scrolled) .nav a {
+    color: #fff;
+}
 
 .header {
     color: #fff;

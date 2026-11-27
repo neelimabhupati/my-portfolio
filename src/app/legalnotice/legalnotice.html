@@ -1,0 +1,37 @@
+<section class="legal-hero">
+    <app-header></app-header>
+
+    <div class="legal-hero__title">
+        <h1>{{ content.title }}</h1>
+    </div>
+</section>
+
+<main class="legal-content">
+    <section class="legal-section">
+        <h2>{{ content.address.heading }}</h2>
+        <address>
+            @for (line of content.address.lines; track line) {
+                {{ line }}<br>
+            }
+        </address>
+    </section>
+
+    <section class="legal-section">
+        <h2>{{ content.contact.heading }}</h2>
+        <p>
+            {{ content.contact.emailLabel }}
+            <a [href]="'mailto:' + content.contact.email">{{ content.contact.email }}</a>
+        </p>
+    </section>
+
+    @for (section of content.sections; track section.title) {
+        <section class="legal-section">
+            <h2>{{ section.title }}</h2>
+            @for (paragraph of section.paragraphs; track $index) {
+                <p>{{ paragraph }}</p>
+            }
+        </section>
+    }
+</main>
+
+<app-footer></app-footer>

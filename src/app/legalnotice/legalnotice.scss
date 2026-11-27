@@ -1,0 +1,75 @@
+:host {
+    display: block;
+    background: #fff;
+    color: #171717;
+}
+
+.legal-hero {
+    display: flex;
+    align-items: center;
+    height: 20.5rem;
+    color: #fff;
+    background:
+        url('/images/01_Background/Img%20Original%20Size/12%20Isolated%20Paper%20Rips%20copia.png') center bottom / cover no-repeat;
+}
+
+.legal-hero app-header {
+    display: block;
+}
+
+.legal-hero__title {
+    width: min(1100px, calc(100% - 40px));
+    margin: 20px auto 0;
+    padding: 12px 0 40px;
+
+    h1 {
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+}
+
+.legal-content {
+    box-sizing: border-box;
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 32px 0 64px;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.legal-section {
+    margin-bottom: 20px;
+
+    h2 {
+        margin: 0 0 4px;
+        color: #164bff;
+        font-size: 16px;
+    }
+
+    p {
+        margin: 0 0 10px;
+    }
+
+    address {
+        font-style: normal;
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+@media (max-width: 600px) {
+    .legal-hero {
+        min-height: 200px;
+    }
+
+    .legal-hero__title {
+        margin-top: 16px;
+    }
+
+    .legal-content {
+        padding-top: 24px;
+        font-size: 14px;
+    }
+}

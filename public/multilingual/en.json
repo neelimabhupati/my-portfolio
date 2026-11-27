@@ -61,5 +61,34 @@
         "messagePlaceholder": "Tell me a little about your project...",
         "consent": "I agree that my details can be used to respond to this message.",
         "sendLabel": "Send"
+    },
+    "projectDetails": {
+        "goBack": "← Go back",
+        "description": "Description",
+        "implementationDetails": "Implementation Details",
+        "duration": "Duration:",
+        "technologies": "Technologies",
+        "previewAlt": "{{title}} project preview",
+        "github": "GitHub",
+        "liveDemo": "Live Demo",
+        "nextProject": "Next Project →",
+        "notFound": "Project not found.",
+        "projects": {
+            "join": {
+                "description": "Join is an Angular application where users can sign in, create and manage tasks and contacts. Data is stored in Firebase, and tasks can be moved between statuses using drag and drop.",
+                "implementationDetails": "This Angular application lets users manage tasks and contacts after signing in. The data is stored in Firebase, and tasks can be moved between statuses using drag and drop.",
+                "duration": "Project duration not added yet"
+            },
+            "sharkie": {
+                "description": "Guide Sharkie through swarms of pufferfish and jellyfish, and face the final boss, the evil orca Stressed Willy!",
+                "implementationDetails": "Sharkie is built with JavaScript and follows Object-Oriented Programming (OOP) principles. Classes, inheritance and encapsulation keep the application modular and easy to extend.",
+                "duration": "Project duration not added yet"
+            },
+            "pokodex": {
+                "description": "The Pokédex is a web application for browsing Pokémon and viewing detailed information. It loads data dynamically and displays it in an interactive interface.",
+                "implementationDetails": "This project focuses on JavaScript and using a REST API. It requests data from an external API, processes it and displays it dynamically.",
+                "duration": "Project duration not added yet"
+            }
+        }
     }
 }

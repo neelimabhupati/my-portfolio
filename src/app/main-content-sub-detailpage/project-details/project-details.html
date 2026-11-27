@@ -2,22 +2,25 @@
 
 @if (project) {
 <section class="project-details">
-    <a class="go-back" routerLink="/">← Go back</a>
+    <a class="go-back" routerLink="/">
+        {{ 'projectDetails.goBack' | translate }}
+    </a>
 
     <div class="project-info">
         <h1>{{ project.title }}</h1>
 
-        <h2>Description</h2>
-        <p>{{ project.description }}</p>
+        <h2>{{ 'projectDetails.description' | translate }}</h2>
+        <p>{{ project.description | translate }}</p>
 
-        <h2>Implementation Details</h2>
-        <p>{{ project.implementationDetails }}</p>
+        <h2>{{ 'projectDetails.implementationDetails' | translate }}</h2>
+        <p>{{ project.implementationDetails | translate }}</p>
 
         <p class="project-duration">
-            <strong>Duration:</strong> {{ project.duration }}
+            <strong>{{ 'projectDetails.duration' | translate }}</strong>
+            {{ project.duration | translate }}
         </p>
 
-        <h2>Technologies</h2>
+        <h2>{{ 'projectDetails.technologies' | translate }}</h2>
         <div class="technology-list">
             @for (technology of project.technologies; track technology) {
             <span class="technology-chip">{{ technology }}</span>
@@ -30,27 +33,27 @@
             @if (project.id === 'sharkie' || project.id === 'pokodex') {
             <app-round-sticker class="project-sticker"></app-round-sticker>
             }
-            <img [src]="project.image" [alt]="project.title + ' project preview'" />
+            <img [src]="project.image" [alt]="'projectDetails.previewAlt' | translate: { title: project.title }" />
 
         </div>
 
         <div class="project-actions">
             @if (project.githubUrl) {
             <a class="project-link" [href]="project.githubUrl" target="_blank" rel="noopener noreferrer">
-                GitHub
+                {{ 'projectDetails.github' | translate }}
             </a>
             }
 
             @if (project.liveUrl) {
             <a class="project-link" [href]="project.liveUrl" target="_blank" rel="noopener noreferrer">
-                Live Demo
+                {{ 'projectDetails.liveDemo' | translate }}
             </a>
             }
         </div>
 
         @if (nextProject) {
         <a class="next-project" [routerLink]="['/projects', nextProject.id]">
-            Next Project →
+            {{ 'projectDetails.nextProject' | translate }}
         </a>
         }
 
@@ -58,5 +61,5 @@
 
 </section>
 } @else {
-<p class="not-found">Project not found.</p>
+<p class="not-found">{{ 'projectDetails.notFound' | translate }}</p>
 }
