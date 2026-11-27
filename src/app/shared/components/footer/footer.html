@@ -11,7 +11,7 @@
             @for (link of footerData.links; track link.label) {
             <a [href]="link.href" [attr.target]="link.external ? '_blank' : null"
                 [attr.rel]="link.external ? 'noopener noreferrer' : null">
-                {{ link.label }}
+                {{ link.label | translate }}
             </a>
             }
         </nav>

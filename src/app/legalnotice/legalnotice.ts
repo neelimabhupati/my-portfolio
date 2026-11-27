@@ -21,7 +21,7 @@ export class Legalnotice {
     contact: {
       heading: 'legalNotice.contactHeading',
       emailLabel: 'legalNotice.emailLabel',
-      email: 'your-email@example.com',
+      email: 'neelimabhupatide@gmail.com',
     },
     sections: [
       {

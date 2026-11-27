@@ -1,3 +1,6 @@
+// yellow images ye folder lo unnayo aa folder name ikkada marchandi
+$icons: '/icons/00_Hand-drawn/00_Header/Color option2';
+
 :host(.project-details-header) .nav a:nth-child(-n + 2) {
     color: #000;
 }
@@ -14,11 +17,16 @@
     z-index: 100;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.372);
-    transition: background-color 0.4s ease;
+    transition: top 0.35s ease, background-color 0.4s ease;
 }
 
 :host(.scrolled) {
     background-color: rgba(23, 23, 23, 0.95);
+}
+
+// scroll down chesthe header paiki hide avutundi, scroll up chesthe malli vastundi
+:host(.hidden) {
+    top: -8rem; // header height kante ekkuva undali
 }
 
 // project-details page lo first 2 links black, dark background mida kanipinchavu
@@ -35,8 +43,6 @@
     width: 100%;
     box-sizing: border-box;
 
-
-
     .nav {
         display: flex;
         align-items: center;
@@ -49,14 +55,22 @@
         display: none;
     }
 
+    .menu-toggle {
+        display: none;
+    }
+
+    // ---------- Logo ----------
     .logo {
+        position: relative;
         display: inline-flex;
         align-items: center;
         background-color: #fff;
         border-radius: 50%;
+        transition: transform 0.25s ease;
 
-        &::after {
-            display: none;
+        &:hover,
+        &:focus-visible {
+            transform: scale(0.96);
         }
 
         img {
@@ -67,7 +81,7 @@
         }
     }
 
-    .logo,
+    // ---------- Nav links + hand-drawn hover images ----------
     .nav a {
         position: relative;
         display: inline-block;
@@ -75,168 +89,32 @@
         text-decoration: none;
         font-size: 1.1rem;
         font-weight: bold;
-
-        &::after {
-            content: '';
-            position: absolute;
-            left: -4px;
-            bottom: -9px;
-            width: calc(100% + 8px);
-            height: 12px;
-            border-bottom: 4px solid white;
-            border-radius: 50%;
-            opacity: 0;
-            transform: scaleX(0) rotate(-2deg);
-            transform-origin: left;
-            transition: opacity 0.2s ease, transform 0.4s ease;
-            pointer-events: none;
-        }
-
-        &:hover::after,
-        &:focus-visible::after {
-            opacity: 1;
-            transform: scaleX(1) rotate(-2deg);
-        }
-
-        .menu-toggle img {
-            background-image: url('/public/images/Design material/Design_material/01_Background/Design Size Relation@3x/01_Hero.png');
-            filter: invert(1);
-        }
-    }
-
-    .logo,
-    .nav a {
         white-space: nowrap;
         transition: transform 0.25s ease;
 
+        // hand-drawn image: modalu hidden (left nundi fully clipped)
+        &::after {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            clip-path: var(--clip-hidden, inset(0 100% 0 0));
+            transition: clip-path 0.4s ease;
+        }
+
+        // hover: image draw avutundi
         &:hover,
         &:focus-visible {
             transform: scale(0.96);
-        }
-    }
 
-    .menu-toggle {
-        display: none;
-    }
-
-}
-
-
-@media (max-width: 768px) {
-    .header {
-        justify-content: space-between;
-
-        .nav,
-        .language-switcher {
-            display: none;
-        }
-
-        .menu-toggle {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            padding: 8px;
-            border: 0;
-            background: transparent;
-
-            span {
-                width: 24px;
-                height: 2px;
-                background: #fff;
+            &::after {
+                clip-path: inset(0);
             }
         }
-
-        .header-socials {
-            display: none;
-        }
-
-        &.menu-open {
-            position: fixed;
-            inset: 0;
-            z-index: 1000;
-            width: 100%;
-            height: 100vh;
-            height: 100dvh;
-            box-sizing: border-box;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            padding: 24px;
-            background-image: url('/images/01_Background/Design%20Size%20Relation@3x/01_Hero.png'); // background: black;
-
-            .logo {
-                position: absolute;
-                top: 24px;
-                left: 24px;
-            }
-
-            .menu-toggle {
-                position: absolute;
-                top: 24px;
-                right: 24px;
-                display: grid;
-                place-items: center;
-                width: 32px;
-                height: 32px;
-                padding: 0;
-
-                img {
-                    width: 24px;
-                    height: 24px;
-                    background: none;
-                }
-
-                .close-icon {
-                    position: relative;
-                    width: 24px;
-                    height: 24px;
-                    background: transparent;
-
-                    &::before,
-                    &::after {
-                        position: absolute;
-                        top: 11px;
-                        left: 0;
-                        width: 24px;
-                        height: 2px;
-                        background: #fff;
-                        content: '';
-                    }
-
-                    &::before {
-                        transform: rotate(45deg);
-                    }
-
-                    &::after {
-                        transform: rotate(-45deg);
-                    }
-                }
-            }
-
-            .nav {
-                display: flex;
-                flex: 1;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 38px;
-                margin-top: 140px;
-            }
-
-            .language-switcher {
-                display: flex;
-                margin-top: auto;
-                margin-bottom: 64px;
-            }
-
-            .header-socials {
-                display: block;
-                justify-content: center;
-                gap: 20px;
-                margin-bottom: 32px;
-            }
-        }
-
 
     }
 }
+
+// About me: circle, paiki nundi kindaki

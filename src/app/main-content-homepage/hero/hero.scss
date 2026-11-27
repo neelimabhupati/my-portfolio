@@ -183,6 +183,12 @@
         width: 40px;
         height: 40px;
     }
+
+    :hover{
+        background-color: rgb(14, 14, 240);
+        border-radius: 50%;
+        border: none;
+    }
 }
 
 @media (max-width: 399px) {

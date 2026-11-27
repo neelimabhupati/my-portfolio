@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-  imports: [],
+  imports: [TranslatePipe],
   selector: 'app-footer',
   styleUrl: './footer.scss',
   templateUrl: './footer.html',
@@ -14,10 +15,10 @@ export class Footer {
     copyright: '© Neelima Bhupati',
     year: new Date().getFullYear(),
     links: [
-      { label: 'Legal Notice', href: '/legal-notice', external: false },
-      { label: 'GitHub', href: 'https://github.com/your-username', external: true },
-      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/your-profile/', external: true },
-      { label: 'Email', href: 'mailto:your.email@example.com', external: false },
+      { label: 'footer.legalNotice', href: '/legal-notice', external: false },
+      { label: 'GitHub', href: 'https://github.com/neelimabhupati', external: true },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/neelima-bhupati/', external: true },
+      { label: 'Email', href: 'neelimabhupatide@gmail.com', external: false },
     ],
   };
 }

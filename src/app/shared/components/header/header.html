@@ -13,10 +13,10 @@
     </button>
 
     <nav class="nav" aria-label="Main navigation">
-        <a href="" (click)="closeMenu()">{{ 'header.aboutMe' | translate }}</a>
-        <a href="" (click)="closeMenu()">{{ 'header.skills' | translate }}</a>
-        <a href="" (click)="closeMenu()">{{ 'header.projects' | translate }}</a>
-        <a href="" (click)="closeMenu()">{{ 'header.contact' | translate }}</a>
+        <a class="nav-about" href="#aboutme" (click)="closeMenu()">{{ 'header.aboutMe' | translate }}</a>
+        <a class="nav-skills" href="#skills" (click)="closeMenu()">{{ 'header.skills' | translate }}</a>
+        <a class="nav-projects" href="#my_project" (click)="closeMenu()">{{ 'header.projects' | translate }}</a>
+        <a class="nav-contact" href="#contact" (click)="closeMenu()">{{ 'header.contact' | translate }}</a>
     </nav>
 
     <div class="language-switcher" aria-label="Switch language">

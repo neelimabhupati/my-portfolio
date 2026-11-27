@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal} from '@angular/core';
 import { SOCIAL_LINKS } from '../../data/social-links/social-links';
 import { Languages } from '../languages/languages';
 import { TranslatePipe } from '@ngx-translate/core';

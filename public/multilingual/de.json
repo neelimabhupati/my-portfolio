@@ -108,5 +108,8 @@
         "copyrightText": "Die auf dieser Website von mir erstellten Inhalte, Texte, Grafiken und Projekte unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen meiner schriftlichen Zustimmung. Soweit Inhalte nicht von mir stammen, werden die Urheberrechte Dritter beachtet und entsprechend gekennzeichnet.",
         "projectsHeading": "Nutzung der Projekte",
         "projectsText": "Die hier gezeigten Projekte und Live-Tests sind Demo-Anwendungen zu Lern- und Präsentationszwecken. Bitte gib keine echten oder sensiblen personenbezogenen Daten ein. Es wird keine Garantie dafür übernommen, dass die Projekte dauerhaft verfügbar oder fehlerfrei sind."
+    },
+    "footer": {
+        "legalNotice": "Impressum"
     }
 }

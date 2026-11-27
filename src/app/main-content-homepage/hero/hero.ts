@@ -2,11 +2,12 @@ import { Component, signal } from '@angular/core';
 import { SOCIAL_LINKS } from '../../shared/data/social-links/social-links';
 import { TranslatePipe } from '@ngx-translate/core';
 @Component({
-  imports: [ TranslatePipe],
+  imports: [TranslatePipe],
   selector: 'app-hero',
   styleUrl: './hero.scss',
   templateUrl: './hero.html',
 })
+
 export class Hero {
   readonly greeting = 'Hello world';
   greetingExpanded = signal(false);
@@ -30,8 +31,9 @@ export class Hero {
   }
 
   contactMe(): void {
-    window.location.href = 'neelimadocument@gmail.com';
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   }
+
   showGreeting(): void {
     this.greetingExpanded.set(true);
   }
