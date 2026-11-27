@@ -90,5 +90,23 @@
                 "duration": "Projektdauer noch nicht eingetragen"
             }
         }
+    },
+    "legalNotice": {
+        "title": "Impressum",
+        "addressHeading": "Angaben gemäß § 5 DDG",
+        "country": "Deutschland",
+        "contactHeading": "Kontakt",
+        "emailLabel": "E-Mail:",
+        "termsHeading": "Nutzungsbedingungen",
+        "termsText": "Diese Website dient als mein persönliches Portfolio. Sie soll ausschließlich zeigen, wer ich bin, was ich kann und welche Projekte ich umgesetzt habe. Mit dem Besuch und der Nutzung dieser Seite erklärst du dich mit den folgenden Bedingungen einverstanden.",
+        "contentHeading": "Haftung für Inhalte",
+        "contentText1": "Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Dennoch kann ich keine Gewähr dafür übernehmen, dass alle Angaben richtig, vollständig oder aktuell sind. Als Diensteanbieterin bin ich für eigene Inhalte auf diesen Seiten nach § 7 Abs. 1 DDG und den allgemeinen Gesetzen verantwortlich.",
+        "contentText2": "Nach den §§ 8 bis 10 DDG bin ich jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder aktiv nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Sobald ich von einer konkreten Rechtsverletzung Kenntnis erlange, werde ich die betroffenen Inhalte umgehend entfernen.",
+        "linksHeading": "Haftung für Links",
+        "linksText": "Diese Website enthält Links zu externen Webseiten Dritter (z. B. GitHub oder LinkedIn), auf deren Inhalte ich keinen Einfluss habe. Für diese Inhalte ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Sobald ich von einer Rechtsverletzung erfahre, werde ich die entsprechenden Links umgehend entfernen.",
+        "copyrightHeading": "Urheberrecht",
+        "copyrightText": "Die auf dieser Website von mir erstellten Inhalte, Texte, Grafiken und Projekte unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen meiner schriftlichen Zustimmung. Soweit Inhalte nicht von mir stammen, werden die Urheberrechte Dritter beachtet und entsprechend gekennzeichnet.",
+        "projectsHeading": "Nutzung der Projekte",
+        "projectsText": "Die hier gezeigten Projekte und Live-Tests sind Demo-Anwendungen zu Lern- und Präsentationszwecken. Bitte gib keine echten oder sensiblen personenbezogenen Daten ein. Es wird keine Garantie dafür übernommen, dass die Projekte dauerhaft verfügbar oder fehlerfrei sind."
     }
 }

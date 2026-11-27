@@ -2,35 +2,36 @@
     <app-header></app-header>
 
     <div class="legal-hero__title">
-        <h1>{{ content.title }}</h1>
+        <h1>{{ content.title | translate }}</h1>
     </div>
 </section>
 
 <main class="legal-content">
     <section class="legal-section">
-        <h2>{{ content.address.heading }}</h2>
+        <h2>{{ content.address.heading | translate }}</h2>
         <address>
             @for (line of content.address.lines; track line) {
-                {{ line }}<br>
+            {{ line }}<br>
             }
+            {{ content.address.country | translate }}
         </address>
     </section>
 
     <section class="legal-section">
-        <h2>{{ content.contact.heading }}</h2>
+        <h2>{{ content.contact.heading | translate }}</h2>
         <p>
-            {{ content.contact.emailLabel }}
+            {{ content.contact.emailLabel | translate }}
             <a [href]="'mailto:' + content.contact.email">{{ content.contact.email }}</a>
         </p>
     </section>
 
     @for (section of content.sections; track section.title) {
-        <section class="legal-section">
-            <h2>{{ section.title }}</h2>
-            @for (paragraph of section.paragraphs; track $index) {
-                <p>{{ paragraph }}</p>
-            }
-        </section>
+    <section class="legal-section">
+        <h2>{{ section.title | translate }}</h2>
+        @for (paragraph of section.paragraphs; track paragraph) {
+        <p>{{ paragraph | translate }}</p>
+        }
+    </section>
     }
 </main>
 
